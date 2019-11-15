@@ -1,0 +1,26 @@
+<div class="ui raised very padded text container segment">
+  <h1 class="ui header">Artists</h1>
+    <br /> 
+      <%= link_to "New Artist", new_artist_path %>
+        <table class="ui striped table">
+          <thead>
+            <tr class="center aligned">
+            <th colspan="5"></th>
+            </tr>
+          </thead>
+  
+      <tbody>
+          <% @artists.each do |artist| %>
+            <tr class="center aligned">
+              <td><%= artist.name %></td>
+              <td>
+                <img class="ui avatar image small" src="https://robohash.org/<%= artist.avatar %>?set=set4" />
+              </td>
+              <td><%= link_to "Show", artist_path(artist) %></td>
+              <td><%= link_to "Edit", edit_artist_path(artist) %></td>
+              <td><%= link_to "Destroy", artist_path(artist), method: :delete %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+</div>

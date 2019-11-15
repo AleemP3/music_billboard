@@ -1,0 +1,18 @@
+<div class="ui attached stackable menu">
+<%= form_with(model: artist, local: true, class: "ui form") do |a| %>
+  <div class="field">
+    <%= a.label :name %>
+    <%= a.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+  <div class="field">
+    <%= a.label :avatar %>
+    <%= a.text_field :avatar, required: true, placeholder: "Favorite LOL Champion" %>
+  </div>
+  <div class="field">
+    <%= a.label :age %>
+    <%= a.text_field :age, placeholder: "Age" %>
+  </div>
+  <br />
+  <%= a.submit class: "ui button" %>
+<% end %>
+</div>

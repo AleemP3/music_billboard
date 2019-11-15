@@ -1,0 +1,7 @@
+<div class="ui center aligned icon header">
+  <h1 class="ui center aligned icon header">Edit Song</h1>
+  <br />
+    <%= render "form", song: @song %>
+      <br />
+        <%= link_to "Back", artist_song_path(@artist, @song), class: "ui primary button" %>
+</div>

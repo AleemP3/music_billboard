@@ -1,0 +1,19 @@
+
+ <div class="ui two column centered grid">
+    <%= form_with(model: [@artist, song], local: true, class: "ui form") do |s| %>
+    <div class="field">
+      <%= s.label :title %>
+      <%= s.text_field :title, required: true, placeholder: "Title" %>
+    </div>
+    <div class="field">
+      <%= s.label :duration %>
+      <%= s.text_field :duration, required: true, placeholder: "Add Duration Number" %>
+    </div>
+    <div class="field">
+      <%= s.label :artist_name %>
+      <%= s.text_field :artist_name, placeholder: "Artist" %>
+    </div>
+    <br />
+      <%= s.submit class: "ui green basic button" %>
+    <% end %>
+  </div>

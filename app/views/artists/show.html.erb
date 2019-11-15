@@ -1,0 +1,21 @@
+<div class="ui card">
+  <div class="image">
+    <img src="https://robohash.org/<%= @artist.avatar %>?set=set4" />
+  </div>
+  <div class="content">
+    <p class="header">
+      <%= @artist.name %> 
+    </p>
+    <div class="item">
+      <span class="date">Age: <%= @artist.age %></span>
+    </div>
+    <div class="item">
+     League of Legends Main: <%= @artist.avatar %>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= link_to "Songs", artist_songs_path(@artist) %> 
+    <%= link_to "Edit", edit_artist_path(@artist) %>
+    <%= link_to "Back", artists_path %>
+  </div>
+</div>
