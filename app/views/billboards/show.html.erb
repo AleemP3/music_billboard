@@ -1,0 +1,37 @@
+<div class="ui raised very padded text container segment">
+  <div id="bill-content" class="content">
+    <p id="billboard-show" class="header">
+      <%= @billboard.name %> <br />
+      <a class="ui red tag label">HOT NEW SINGLES</a>
+      <br />
+      <i  class="green check icon"></i>
+      100 Votes
+    </p>
+  </div>
+    <div id="bill-buttons" class="ui blue label">
+      <%= link_to "Edit", edit_billboard_path(@billboard) %>
+      <%= link_to "Back", billboards_path %>
+    </div>
+</div>
+
+
+<% @songs.each do |song| %>
+<div class="ui card">
+  <div class="content">
+    <p class="header">
+      Title: <%= song.title %> <a class="ui red tag label">HOT NEW</a>
+    </p>
+<div class="item">
+  <span class="date">Duration: <%= song.duration %> Minutes</span>
+</div>
+<div class="item">
+  Artist: <%= song.artist_name%>
+    </div>  
+      <div class="extra">
+        <i class="green check icon"></i>
+        3 Votes
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

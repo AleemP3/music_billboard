@@ -1,0 +1,47 @@
+<h1 class="ui header">Billboards</h1>
+  <br /> 
+    <p><%= link_to "New Billboard", new_billboard_path %></p>
+    <div id="index-bill" class="ui grid">
+      <% @billboards.each do |bill| %>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <div class="ui card">
+            <div class="content">
+              <p class="header"><%= bill.name %></p>
+            </div>
+            <div class="item">
+              <%= link_to "Show", billboard_path(bill) %>
+              <%= link_to "Edit", edit_billboard_path(bill) %>
+              <%= link_to "Destroy", billboard_path(bill), method: :delete %> 
+            </div>  
+          </div>
+        </div>
+        <% end %>
+    </div>
+      <br />
+
+<div class="ui grid">
+  <% @songs.each do |song| %>
+    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+  <div class="ui card">
+    <div class="content">
+      <p class="header">
+        Title: <%= song.title %> <a class="ui red tag label">HOT NEW</a>
+      </p>
+        <div class="item">
+          <span class="date">Duration: <%= song.duration %> Minutes</span>
+        </div>
+        <div class="item">
+          Artist: <%= song.artist_name%>
+        </div>  
+            <div class="extra">
+                <i class="green check icon"></i>
+                3 Votes
+            </div>
+      <select>
+      <option><%= song.title %></option>
+      </select>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>

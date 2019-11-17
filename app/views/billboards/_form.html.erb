@@ -1,0 +1,11 @@
+
+ <div class="ui two column centered grid">
+ <%= form_with(model: @billboard, local: true, class: "ui form") do |b| %>
+ <div class="field">
+   <%= b.label :name %>
+   <%= b.text_field :name, required: true, placeholder: "Title" %>
+ </div>
+ <br />
+   <%= b.submit class: "ui green basic button" %>
+ <% end %>
+</div>
