@@ -5,8 +5,11 @@ before_action :set_billboard, only: [:show, :edit, :update, :destroy]
   def index
     @billboards = Billboard.all 
     @songs = Song.all 
-    
   end
+
+  def add_song
+    @songs = Song.find_all 
+  end 
 
   def show 
     @songs = Song.all 

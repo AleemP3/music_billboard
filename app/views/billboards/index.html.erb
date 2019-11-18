@@ -37,11 +37,16 @@
                 <i class="green check icon"></i>
                 3 Votes
             </div>
-      <select>
-      <option><%= song.title %></option>
-      </select>
+              <select>
+    <%= @billboards.each do |b| %> 
+      <option>
+        <%= b.name  %> 
+        </option> 
+        <% end %> 
+    </select> 
+    <button>Add Song</button>
           </div>
         </div>
       </div>
-  <% end %>
+  <% end %> 
 </div>
