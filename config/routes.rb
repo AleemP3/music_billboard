@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-   root "billboards#index"
+  devise_for :users
+   root "artists#index"
 
 
    resources :artists do
